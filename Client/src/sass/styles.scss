@@ -1,0 +1,23 @@
+@import './variables';
+@import './mixins';
+@import 
+'~bootstrap/scss/functions',
+'~bootstrap/scss/variables',
+'~bootstrap/scss/mixins',
+'~bootstrap/scss/print',
+'~bootstrap/scss/reboot',
+'~bootstrap/scss/type';
+
+.btn-primary {
+    background: $primary-color;
+    border-color: $primary-color;
+    &:hover {
+        background: $primary-hilight;
+        border-color: $primary-hilight;
+        
+    }
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+    box-shadow: none;
+}

@@ -1,0 +1,52 @@
+@import '~sass/variables';
+
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.m-30 {
+    margin: 30px;
+}
+
+.message-row {
+    min-height: 60px;
+}
+
+@keyframes fade-in-out {
+    0%   {opacity: 0;}
+    30% {opacity: 1;}
+    70% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.message {
+    animation-name: fade-in-out;
+    animation-duration: 2s;
+    font-size: 36px;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+.progress-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px;
+    font-size: 66px;
+    text-align: center;
+    color: $primary-color;
+    height: 100%;
+    width: 100%;
+    background: rgba(100, 50, 100, .5);
+    z-index: 5;
+}
+
