@@ -1,0 +1,14 @@
+{
+  "name": "dog-bot-video-service",
+  "version": "1.0.0",
+  "description": "The video service component of the DogBot3000 System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "raspberry-pi-mjpeg-server": "^1.0.0"
+  }
+}
