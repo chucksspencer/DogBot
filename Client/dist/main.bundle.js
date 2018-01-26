@@ -432,7 +432,7 @@ var DispenserService = (function () {
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
     production: false,
-    baseUrl: 'http://192.168.1.150:3000',
+    baseUrl: 'http://192.168.1.135:3000',
     streamUrl: 'http://192.168.1.102:9090/stream/video.mjpeg'
 };
 
