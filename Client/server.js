@@ -17,15 +17,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Set our api routes
-app.use('/api', api);
-app.use('/dispenser', dispenser);
-
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+// Set our api routes
+app.use('/api', api);
+app.use('/dispenser', dispenser);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {

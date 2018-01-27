@@ -15,7 +15,9 @@ router.post('/left', function(req, res) {
   setTimeout(function() {
     rotate(FULLROTATION, "ccw")
   }, 1000);
-  res.send('dispense left');
+  setTimeout(function() {
+    res.send('dispense left');
+  }, 5000)
 });
 
 router.post('/right', function(req, res) {
@@ -23,21 +25,27 @@ router.post('/right', function(req, res) {
   setTimeout(function() {
     rotate(FULLROTATION, "cw")
   }, 1000);
-  res.send('dispense right dude');
+  setTimeout(function() {
+    res.send('dispense right');
+  }, 5000)
 });
 
 router.post('/move', function(req, res) {
   var steps = req.body.steps;
   var direction = req.body.direction;
   rotate(steps, direction);
-  res.send('Moving position: ' + steps + ' in direction ' + direction);
+  setTimeout(function() {
+    res.send('Moving position: ' + steps + ' in direction ' + direction);
+  }, steps * 10)
 });
 
 router.post('/wiggle', function(req, res) {
   var distance = req.body.distance;
   var direction = req.body.direction;
   wiggle(distance, direction);
-  res.send('Wiggling: ' + distance + ' in direction ' + direction);
+  setTimeout(function() {
+    res.send('Wiggling: ' + distance + ' in direction ' + direction);
+  }, distance * 20)
 });
 
 wiggle = function(distance, direction) { // direction ccw or cw
