@@ -10,13 +10,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DefaultRequestOptions, requestOptionsProvider } from './services/default-request-options.service';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
-
-
+import { TweakComponent } from './components/tweak/tweak.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DispenserComponent
+    DispenserComponent,
+    TweakComponent
   ],
   imports: [
     BrowserModule,

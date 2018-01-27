@@ -1,0 +1,15 @@
+<div class="button-container">
+  <button class="btn btn-primary p-30" (click)="moveLeftFast()"><<</button>
+  <button class="btn btn-primary p-30" (click)="moveLeftSlow()"><</button>
+  <button class="btn btn-primary p-30" (click)="moveRightSlow()"> > </button>
+  <button class="btn btn-primary p-30" (click)="moveRightFast()"> >> </button>
+</div>
+
+<div class="button-container">
+    <button class="btn btn-primary p-30" (click)="wiggleLeft()">Wiggle Left</button>
+    <button class="btn btn-primary p-30" (click)="wiggleRight()">Wiggle Right</button>
+</div>
+
+<div class="progress-overlay" *ngIf="processing">
+    <i class="fa fa-circle-o-notch fa-spin"></i>
+  </div>

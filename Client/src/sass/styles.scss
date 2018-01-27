@@ -21,3 +21,38 @@
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
     box-shadow: none;
 }
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.m-30 {
+    margin: 30px;
+}
+
+.m-5 {
+    margin: 5px;
+}
+
+.progress-overlay {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    padding: 40px;
+    font-size: 66px;
+    text-align: center;
+    color: $primary-color;
+    height: 100%;
+    width: 100%;
+    background: rgba(100, 50, 100, .5);
+    z-index: 5;
+}
+

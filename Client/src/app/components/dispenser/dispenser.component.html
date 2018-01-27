@@ -1,16 +1,15 @@
 <div class="container">
   <div class="row text-center p-20 d-none d-lg-flex">
-      <div class="col col-md-2 text-right">
-        <button class="btn btn-primary p-30 m-30" type="button" (click)="dispenseLeft()">Left</button>
-      </div>
-      <div class="col col-md-8 text-center">
-          <img src="http://192.168.1.135:8080/image.jpg" width="100%" />
-        </div>
-      <div class="col col-md-2 text-left">
-          <button class="btn btn-primary p-30 m-30" type="button" (click)="dispenseRight()">Right</button>
-      </div>
-  
+    <div class="col col-md-2 text-right">
+      <button class="btn btn-primary p-30 m-30" type="button" (click)="dispenseLeft()">Left</button>
     </div>
+    <div class="col col-md-8 text-center">
+      <img src="http://192.168.1.135:8080/image.jpg" width="100%" />
+    </div>
+    <div class="col col-md-2 text-left">
+      <button class="btn btn-primary p-30 m-30" type="button" (click)="dispenseRight()">Right</button>
+    </div>
+  </div>
   <div class="row text-center p-20 d-xs-flex d-sm-flex d-md-flex d-lg-none">
     <div class="col text-center">
       <button class="btn btn-primary p-30 m-30" type="button" (click)="dispenseLeft()">Left</button>
@@ -26,17 +25,6 @@
   <div class="form-group row p-10 message-row">
     <div class="col-12 message" *ngIf="message !== null">
       {{message}}
-    </div>
-  </div>
-  <div class="form-group row p-10">
-    <div class="col-5 col-form-label text-right">
-      <label for="move-to-value">Move: </label>
-    </div>
-    <div class="col-3 input-group">
-      <input type="text" id="move-to-value" class="form-control" [(ngModel)]="moveValue" style="width:60px">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" (click)="moveToTarget()">Yas</button>
-      </span>
     </div>
   </div>
 </div>

@@ -7,15 +7,11 @@ import 'rxjs/add/operator/finally';
   templateUrl: './dispenser.component.html',
   styleUrls: ['./dispenser.component.scss']
 })
-export class DispenserComponent implements OnInit {
-  public moveValue = 0;
+export class DispenserComponent {
   public message = null;
   public processing = false;
 
   constructor(private dispenserService: DispenserService) { }
-
-  ngOnInit() {
-  }
 
   dispenseLeft() {
     this.processing = true;
@@ -26,8 +22,7 @@ export class DispenserComponent implements OnInit {
       },
       error => {
         this.flashMessage('Error dispensing left!');
-      }
-      );
+      });
   }
 
   dispenseRight() {
@@ -40,24 +35,7 @@ export class DispenserComponent implements OnInit {
       },
       error => {
         this.flashMessage('Error dispensing right!');
-      }
-      );
-  }
-
-  moveToTarget() {
-    this.processing = true;
-    this.dispenserService.moveTo(this.moveValue)
-      .finally(() => {
-        this.processing = false;
-        this.moveValue = 0;
-      })
-      .subscribe(res => {
-        this.flashMessage('Moved ' + this.moveValue);
-      },
-      error => {
-        this.flashMessage('Error moving!');
-      }
-      );
+      });
   }
 
   flashMessage(newMessage: string) {
