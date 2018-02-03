@@ -7,12 +7,21 @@ import 'rxjs/add/operator/finally';
   templateUrl: './dispenser.component.html',
   styleUrls: ['./dispenser.component.scss']
 })
-export class DispenserComponent {
+export class DispenserComponent implements OnInit {
   public message = null;
   public processing = false;
 
   constructor(private dispenserService: DispenserService) { }
+  public innerWidth: any;
 
+  ngOnInit() {
+      this.innerWidth = window.innerWidth;
+  }
+
+  get isMobile(): boolean {
+    return innerWidth < 992;
+  }
+  
   dispenseLeft() {
     this.processing = true;
     this.dispenserService.dispenseLeft()
