@@ -21,7 +21,7 @@ export class DispenserComponent implements OnInit {
   get isMobile(): boolean {
     return innerWidth < 992;
   }
-  
+
   dispenseLeft() {
     this.processing = true;
     this.dispenserService.dispenseLeft()
