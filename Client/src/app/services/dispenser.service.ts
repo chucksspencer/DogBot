@@ -3,6 +3,9 @@ import { Observable } from 'rxjs/Observable';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+/**
+ * This service makes calls to the back end that cause the motor to turn and dispense treats (hopefully)
+ */
 @Injectable()
 export class DispenserService {
 

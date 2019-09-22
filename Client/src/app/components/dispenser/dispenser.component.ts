@@ -17,6 +17,9 @@ export class DispenserComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Make the dispenser dispense a treat out of the left chute
+   */
   dispenseLeft() {
     this.processing = true;
     this.dispenserService.dispenseLeft()
@@ -30,6 +33,9 @@ export class DispenserComponent implements OnInit {
       );
   }
 
+  /**
+   * Make the dispenser dispense a treat out of the right chute
+   */
   dispenseRight() {
     this.processing = true;
     this.dispenserService.dispenseRight()
@@ -44,6 +50,9 @@ export class DispenserComponent implements OnInit {
       );
   }
 
+  /**
+   * Rotate the dispense drum to an arbitrary position - to help fix calibration
+   */
   moveToTarget() {
     this.processing = true;
     this.dispenserService.moveTo(this.moveValue)
